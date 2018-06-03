@@ -1,0 +1,50 @@
+@mixin clearfix{
+    &::after{
+        content:"";
+        display: table;
+        clear: both;
+    }
+}
+@mixin absPosCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin absPosBottomCenter{
+    position: absolute;
+    bottom: -17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*
+order for responsive webdesign chages
+
+Base + Typography > general layout + grid > page layout > components
+
+*/
+
+
+@mixin respond($breakpoint){
+    @if $breakpoint == phone{
+        @media (max-width: 780px){
+            @content
+        }
+    };
+    @if $breakpoint == tab-horizontal{
+        @media (max-width: 900px){
+            @content
+        }
+    };
+    @if $breakpoint == tab-vertical{
+        @media (max-width: 1200px){
+            @content
+        }
+    };
+    @if $breakpoint == xl-screen{
+        @media (min-width: 1800px){
+            @content
+        }
+    };
+}

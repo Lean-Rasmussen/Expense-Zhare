@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    // This defines what 1 rem for the app
+    font-size: 62.5%;
+
+    @include respond(tab-vertical){
+        font-size:62%;
+    }
+
+    @include respond(tab-horizontal){
+        font-size: 55%;
+    }
+
+    @include respond(xl-screen){
+        font-size: 80%;
+    }
+}
+body{
+    box-sizing: border-box;
+    margin:0 2rem;
+    background-color: $color-light-grey1;
+
+
+    @include respond(tab-horizontal){
+        margin: 0 0;
+    }
+}
