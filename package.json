@@ -12,9 +12,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "watchSass":"node-sass --watch src/styles/sass/main.scss src/styles/css/style.css"
+    "watchSass": "node-sass --watch src/styles/sass/main.scss src/styles/css/style.css"
   },
   "devDependencies": {
+    "enzyme": "^3.3.0",
+    "jest": "^20.0.4",
     "node-sass": "^4.9.0"
   }
 }
