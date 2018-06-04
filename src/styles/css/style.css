@@ -146,3 +146,21 @@ body {
   @media (max-width: 900px) {
     .u-margin-top--large {
       margin-top: 6rem; } }
+
+.addPayer {
+  background-color: orange; }
+
+.addPayment {
+  background-color: green; }
+
+.btn {
+  background-color: green; }
+
+.owedOverview {
+  background-color: red; }
+
+.payerOwed {
+  background-color: lightblue; }
+
+.totalSpend {
+  background-color: orchid; }
