@@ -4,6 +4,9 @@ order for responsive webdesign chages
 Base + Typography > general layout + grid > page layout > components
 
 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS */ }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -154,7 +157,14 @@ body {
   background-color: green; }
 
 .btn {
-  background-color: green; }
+  width: 15rem;
+  height: 3rem;
+  text-transform: uppercase; }
+
+.input {
+  border: 1px solid black;
+  border-radius: 1.5rem;
+  height: 3rem; }
 
 .owedOverview {
   background-color: red; }
@@ -164,3 +174,23 @@ body {
 
 .totalSpend {
   background-color: orchid; }
+
+.App {
+  display: grid;
+  grid-template-rows: 10rem 1fr 1fr 10rem;
+  grid-template-columns: 10rem 1fr 1fr 10rem;
+  grid-template-areas: "margin-top     margin-top      margin-top      margin-top" "margin-left    top-left        top-right       margin-right" "margin-left    bot-left        bot-right       margin-right" "margin-bot     margin-bot      margin-bot      margin-bot";
+  width: 100%;
+  height: 100vh; }
+
+.addPayer {
+  grid-area: top-left; }
+
+.addPayment {
+  grid-area: bot-left; }
+
+.owedOverview {
+  grid-area: top-right; }
+
+.totalSpend {
+  grid-area: bot-right; }

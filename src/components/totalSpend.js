@@ -1,14 +1,14 @@
 import React,{Component} from 'react';
-import PayerOwed from "./payerOwed";
+import Expense from "./expense";
 
 
 export default class totalSpend extends Component{
     render(){
         return(
             <div className="totalSpend">
-                Here is the totalSpend
-                <PayerOwed />
+                <Expense />
+                <p> Total expenses:</p>
             </div>
         )
     }
-}
+}  

@@ -4,7 +4,9 @@ export default class payerOwed extends Component{
     render(){
         return(
             <div className="payerOwed">
-                Here is the payerOwed
+                <p>Thomas owes</p>
+                <p>2250</p>
+                <button>X</button>
             </div>
         )
     }
