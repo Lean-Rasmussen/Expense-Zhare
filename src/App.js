@@ -9,16 +9,14 @@ class App extends Component {
   constructor(){
     super()
 
-    this.state = {payers:[
-      
-    ]};
-    
+    this.state = {payers:[],
+                  payments:[]  
+    };
   }
 
   addPayer=({Name})=>{
     const { payers } =this.state;
-    
-    var newPayer = {
+    let newPayer = {
       Name:Name,
       id: Name,
       balance: +0,
@@ -26,16 +24,25 @@ class App extends Component {
     }
     payers.push(newPayer);
     this.setState({payers});
-    //Name < 3 ? error.push("Name must be longer");
-    //error.length == 0 ?this.setState({payers}) : console.log(error);
-    //const error=[];
+
   }
+  addPayment=({Name, amount, description })=>{
+    const { payments } =this.state;
+    let newPayment ={
+      payer: Name,
+      amount:amount,
+      description: description,
+    }
+    payments.push(newPayment)
+    this.setState({payments})
+  }
+
   render() {
     return (
       <div className="App">
         <AddPayer payers={this.state.payers} addPayer= {this.addPayer} />
-        <AddPayment />
-        <OwedOverview />
+        <AddPayment addPayment={this.addPayment}/>
+        <OwedOverview payments={this.state.payments} />
         <TotalSpend />
 
       </div>

@@ -27,8 +27,7 @@ class AddPayer extends Component{
                 <ul>
                 {this.props.payers.map((payer) =>{
               return(
-                    <Payer name ={payer.name} id={payer.id} />
-
+                    <Payer name ={payer.Name} id={payer.id} />
                     )}
                 )}     
                 </ul>

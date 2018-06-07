@@ -2,4 +2,20 @@
     border: 1px solid black;
     border-radius: 1.5rem;
     height: 3rem;
+    //this should center placeholder text
+    &::-webkit-input-placeholder {
+       text-align: center;
+    }
+    
+    &:-moz-placeholder { /* Firefox 18- */
+       text-align: center;  
+    }
+    
+    &::-moz-placeholder {  /* Firefox 19+ */
+       text-align: center;  
+    }
+    
+    &:-ms-input-placeholder {  
+       text-align: center; 
+    }
 }
