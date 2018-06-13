@@ -10,6 +10,11 @@ class AddPayer extends Component{
     inputValue = (e) =>{
         this.setState({input:e.target.value})
     }
+    resetLocalState = ()=>{
+        this.setState({
+            input:"",
+        })
+    }
 
 
     render(){
@@ -22,12 +27,16 @@ class AddPayer extends Component{
                         className="input addPayer__input" value={this.state.input}
                 />
                 <button className="addPayer__btn btn "
-                onClick={()=>this.props.addPayer({Name:this.state.input})}
+                onClick={()=>{
+                        this.props.addPayer({Name:this.state.input})
+                        this.resetLocalState();
+                    }
+                }
                 > Add </button>
                 <ul>
                 {this.props.payers.map((payer) =>{
               return(
-                    <Payer name ={payer.Name} id={payer.id} />
+                    <Payer removePayer={this.props.removePayer} name ={payer.Name} key={payer.id} />
                     )}
                 )}     
                 </ul>

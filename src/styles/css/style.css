@@ -165,8 +165,18 @@ body {
   border: 1px solid black;
   border-radius: 1.5rem;
   height: 3rem; }
+  .input::-webkit-input-placeholder {
+    text-align: center; }
+  .input:-moz-placeholder {
+    /* Firefox 18- */
+    text-align: center; }
+  .input::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center; }
+  .input:-ms-input-placeholder {
+    text-align: center; }
 
-.owedOverview {
+.expense-overview {
   background-color: red; }
 
 .payerOwed {
@@ -174,6 +184,9 @@ body {
 
 .totalSpend {
   background-color: orchid; }
+
+.expense {
+  background-color: aquamarine; }
 
 .App {
   display: grid;
@@ -189,7 +202,7 @@ body {
 .addPayment {
   grid-area: bot-left; }
 
-.owedOverview {
+.expense-overview {
   grid-area: top-right; }
 
 .totalSpend {

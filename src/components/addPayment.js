@@ -5,22 +5,34 @@ export default class addPaymnet extends Component{
         super()
         this.state = {
             description: "",
-            expenseAmount: "",
-            Name: "Daniels",
+            expenseAmount: 0,
+            name: "",
 
         }
     }
 
+    resetLocalState= ()=>{
+        this.setState({
+            description: "",
+            expenseAmount: 0,
+            name: "",
+        })
+    }
+    inputName=(e)=>{
+        this.setState({
+            name:e.target.value,
+        })
+    }
     inputDescription=(e) =>{
             this.setState({
-                expenseName: e.target.value,
+                description: e.target.value,
         })
     }
 
     inputExpenseAmount=(e) =>{
-        if(Number.isInteger(e.target.value-0)){
+        if(Number.isInteger(Number.parseFloat(e.target.value))|| "." ){
             this.setState({
-                expenseAmount: e.target.value,
+                expenseAmount: Number.parseFloat(e.target.value),
             })
         }
 
@@ -32,19 +44,28 @@ export default class addPaymnet extends Component{
                 <h3>Add payment</h3>
                 <div className="addPayment__name-input">
                     <p>Who paied:</p>
-                    <input type="text" className="input"
+                    <select type="text" className="input"
                         placeholder="Who spend the money?" 
+                        onChange={(event)=>{this.inputName(event)}}
                         required
-                    />
+                    >
+
+                    {this.props.payers.map((payer) =>{
+                        return(
+                            <option key={payer.Name}>{payer.Name} </option>
+                        )}
+                    )}
+                    
+                    </select>
                     <p>Expense description:</p>
-                    <input type= "text" className="input" 
+                    <input type= "text" className="description-input input" 
                     placeholder="What did you buy?"
                     value={this.state.description} 
                     onChange={(event)=>{this.inputDescription(event)}}
                     required
                     />
                     <p>Expense amount:</p>
-                    <input type= "text" className="input" placeholder="How much did you spend?"
+                    <input type= "text" className="amount-input input" placeholder="How much did you spend?"
                         min="0"
                         value={this.state.expenseAmount} 
                         onChange={(event)=>{this.inputExpenseAmount(event)}}
@@ -53,10 +74,14 @@ export default class addPaymnet extends Component{
                     <br />
                     <button 
                         className="btn"
-                        onClick={()=>this.props.addPayer({Name:this.state.input})}
-                        onClick={()=>this.props.addPayment({Name:this.state.Name, 
+                        onClick={()=>{
+                            this.props.addPayment({name:this.state.name, 
                                 amount:this.state.expenseAmount,
-                                description: this.state.description,})}
+                                description: this.state.description,
+                            })
+                            this.resetLocalState()
+                            }
+                        }
                     >Add payment</button>
                 </div>                
             </div>

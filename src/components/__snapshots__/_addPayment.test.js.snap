@@ -1,3 +1,478 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`addPayment Renders 1`] = `[Function]`;
+exports[`addPayment Renders 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <addPaymnet />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+          Add payment
+</h3>,
+        <div
+          className="addPayment__name-input"
+>
+          <p>
+                    Who paied:
+          </p>
+          <input
+                    className="input"
+                    placeholder="Who spend the money?"
+                    required={true}
+                    type="text"
+          />
+          <p>
+                    Expense description:
+          </p>
+          <input
+                    className="description-input input"
+                    onChange={[Function]}
+                    placeholder="What did you buy?"
+                    required={true}
+                    type="text"
+                    value=""
+          />
+          <p>
+                    Expense amount:
+          </p>
+          <input
+                    className="amount-input input"
+                    min="0"
+                    onChange={[Function]}
+                    placeholder="How much did you spend?"
+                    required={true}
+                    type="text"
+                    value=""
+          />
+          <br />
+          <button
+                    className="btn"
+                    onClick={[Function]}
+          >
+                    Add payment
+          </button>
+</div>,
+      ],
+      "className": "addPayment",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Add payment",
+        },
+        "ref": null,
+        "rendered": "Add payment",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              Who paied:
+</p>,
+            <input
+              className="input"
+              placeholder="Who spend the money?"
+              required={true}
+              type="text"
+/>,
+            <p>
+              Expense description:
+</p>,
+            <input
+              className="description-input input"
+              onChange={[Function]}
+              placeholder="What did you buy?"
+              required={true}
+              type="text"
+              value=""
+/>,
+            <p>
+              Expense amount:
+</p>,
+            <input
+              className="amount-input input"
+              min="0"
+              onChange={[Function]}
+              placeholder="How much did you spend?"
+              required={true}
+              type="text"
+              value=""
+/>,
+            <br />,
+            <button
+              className="btn"
+              onClick={[Function]}
+>
+              Add payment
+</button>,
+          ],
+          "className": "addPayment__name-input",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Who paied:",
+            },
+            "ref": null,
+            "rendered": "Who paied:",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "input",
+              "placeholder": "Who spend the money?",
+              "required": true,
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Expense description:",
+            },
+            "ref": null,
+            "rendered": "Expense description:",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "description-input input",
+              "onChange": [Function],
+              "placeholder": "What did you buy?",
+              "required": true,
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Expense amount:",
+            },
+            "ref": null,
+            "rendered": "Expense amount:",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "amount-input input",
+              "min": "0",
+              "onChange": [Function],
+              "placeholder": "How much did you spend?",
+              "required": true,
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add payment",
+              "className": "btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Add payment",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            Add payment
+</h3>,
+          <div
+            className="addPayment__name-input"
+>
+            <p>
+                        Who paied:
+            </p>
+            <input
+                        className="input"
+                        placeholder="Who spend the money?"
+                        required={true}
+                        type="text"
+            />
+            <p>
+                        Expense description:
+            </p>
+            <input
+                        className="description-input input"
+                        onChange={[Function]}
+                        placeholder="What did you buy?"
+                        required={true}
+                        type="text"
+                        value=""
+            />
+            <p>
+                        Expense amount:
+            </p>
+            <input
+                        className="amount-input input"
+                        min="0"
+                        onChange={[Function]}
+                        placeholder="How much did you spend?"
+                        required={true}
+                        type="text"
+                        value=""
+            />
+            <br />
+            <button
+                        className="btn"
+                        onClick={[Function]}
+            >
+                        Add payment
+            </button>
+</div>,
+        ],
+        "className": "addPayment",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Add payment",
+          },
+          "ref": null,
+          "rendered": "Add payment",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Who paied:
+</p>,
+              <input
+                className="input"
+                placeholder="Who spend the money?"
+                required={true}
+                type="text"
+/>,
+              <p>
+                Expense description:
+</p>,
+              <input
+                className="description-input input"
+                onChange={[Function]}
+                placeholder="What did you buy?"
+                required={true}
+                type="text"
+                value=""
+/>,
+              <p>
+                Expense amount:
+</p>,
+              <input
+                className="amount-input input"
+                min="0"
+                onChange={[Function]}
+                placeholder="How much did you spend?"
+                required={true}
+                type="text"
+                value=""
+/>,
+              <br />,
+              <button
+                className="btn"
+                onClick={[Function]}
+>
+                Add payment
+</button>,
+            ],
+            "className": "addPayment__name-input",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Who paied:",
+              },
+              "ref": null,
+              "rendered": "Who paied:",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "input",
+                "placeholder": "Who spend the money?",
+                "required": true,
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Expense description:",
+              },
+              "ref": null,
+              "rendered": "Expense description:",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "description-input input",
+                "onChange": [Function],
+                "placeholder": "What did you buy?",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Expense amount:",
+              },
+              "ref": null,
+              "rendered": "Expense amount:",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "amount-input input",
+                "min": "0",
+                "onChange": [Function],
+                "placeholder": "How much did you spend?",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Add payment",
+                "className": "btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Add payment",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

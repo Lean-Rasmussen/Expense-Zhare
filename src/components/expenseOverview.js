@@ -1,20 +1,23 @@
 import React,{Component} from 'react';
-import Expense from "./payerOwed";
+import Expense from "./expense";
 
 
 export default class expenseOverview extends Component{
     render(){
         return(
-            <div className="owedOverview">
-        {this.props.payments.map((payment) =>{
-                        return(
-                                <Expense 
-                                name={payment.Name} 
-                                id={payment.description} 
-                                description={payment.description}
-                                amount={payment.amount} />
-                                )}
-                            )}    
+            <div className="expense-overview">
+                <h3>Last added expenses</h3>
+                {this.props.payments.map((payment) =>{
+                                return(
+                                        <Expense 
+                                        name={payment.name} 
+                                        id={payment.id} 
+                                        key={payment.id}
+                                        description={payment.description}
+                                        amount={payment.amount}
+                                        removePayment ={this.props.removePayment} />
+                                        )}
+                                    )}    
             </div>
         )
     }

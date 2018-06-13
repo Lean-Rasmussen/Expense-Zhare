@@ -4,7 +4,7 @@ exports[`addPayment Renders 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <owedOverview />,
+  Symbol(enzyme.__unrendered__): <expenseOverview />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -19,7 +19,7 @@ ShallowWrapper {
     "props": Object {},
     "ref": null,
     "rendered": null,
-    "type": "owedOverview",
+    "type": "expenseOverview",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -29,7 +29,7 @@ ShallowWrapper {
       "props": Object {},
       "ref": null,
       "rendered": null,
-      "type": "owedOverview",
+      "type": "expenseOverview",
     },
   ],
   Symbol(enzyme.__options__): Object {

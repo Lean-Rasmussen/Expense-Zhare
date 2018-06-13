@@ -3,11 +3,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 //import components
-import owedOverview from './owedOverview';
+import expenseOverview from './expenseOverview';
 
 
-const OwedOverview = shallow(<owedOverview />);
+const ExpenseOverview = shallow(<expenseOverview />);
 
 it('addPayment Renders', ()=> {
-  expect(OwedOverview).toMatchSnapshot();
+  expect(ExpenseOverview).toMatchSnapshot();
 })
