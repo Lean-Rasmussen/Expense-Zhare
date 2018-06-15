@@ -15,7 +15,6 @@ export default class addPaymnet extends Component{
         this.setState({
             description: "",
             expenseAmount: 0,
-            name: "",
         })
     }
     inputName=(e)=>{
@@ -41,30 +40,29 @@ export default class addPaymnet extends Component{
     render(){
         return(
             <div className="addPayment">
-                <h3>Add payment</h3>
+                <h3 className="header__sub">Add payment</h3>
                 <div className="addPayment__name-input">
-                    <p>Who paied:</p>
-                    <select type="text" className="input"
-                        placeholder="Who spend the money?" 
+
+                    <p className="para-text">Who paied:</p>
+                    <select type="text" className="input" 
                         onChange={(event)=>{this.inputName(event)}}
                         required
                     >
-
                     {this.props.payers.map((payer) =>{
                         return(
                             <option key={payer.Name}>{payer.Name} </option>
                         )}
-                    )}
-                    
+                    )}           
                     </select>
-                    <p>Expense description:</p>
+                    <p className="para-text">Expense description:</p>
                     <input type= "text" className="description-input input" 
+                    form ="add-payment"
                     placeholder="What did you buy?"
                     value={this.state.description} 
                     onChange={(event)=>{this.inputDescription(event)}}
                     required
                     />
-                    <p>Expense amount:</p>
+                    <p className="para-text">Expense amount:</p>
                     <input type= "text" className="amount-input input" placeholder="How much did you spend?"
                         min="0"
                         value={this.state.expenseAmount} 
@@ -72,16 +70,18 @@ export default class addPaymnet extends Component{
                         required                  
                     />
                     <br />
-                    <button 
-                        className="btn"
-                        onClick={()=>{
-                            this.props.addPayment({name:this.state.name, 
+                    <button     
+                        onClick={(e)=>{
+                            this.props.addPayment({
+                                name:this.state.name, 
                                 amount:this.state.expenseAmount,
                                 description: this.state.description,
                             })
-                            this.resetLocalState()
+                            this.resetLocalState();
                             }
                         }
+                        type="submit"
+                        className="btn"
                     >Add payment</button>
                 </div>                
             </div>

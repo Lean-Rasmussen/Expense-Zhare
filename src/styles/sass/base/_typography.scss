@@ -5,9 +5,9 @@ body{
 
 
 .header__primary{
-    color: $color-white;
+    color: $color-black;
     text-transform: uppercase;
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
 
     &--main{
         display: block;
@@ -32,44 +32,19 @@ body{
         }
     }
 }
-.about__header{
-    color: $medium-green;
-    font-size: 4rem;
-    text-align: center;
-    &__text{
-        font-weight: 200;
-        letter-spacing: 0.75rem;
 
-        @include respond(tab-horizontal){
-            letter-spacing: 0.5rem;
-        }
-
-        @include respond(phone){
-            letter-spacing: 0.25rem;
-        }
-        
-    }
-    @include respond(tab-horizontal){
-        font-size: 4rem;
-    }
-    @include respond(phone){
-        font-size: 3.5rem;
-
-    }
-}
 .header__sub{
+    text-align: center;
     color:$color-black;
     font-size: 2.5rem;
     font-weight: 100;
     border-bottom: 1px solid black;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
-.headline-info{
-    font-size: 2.5rem;
+.para-text{
+    font-size: 2rem;
     width: 80%;
     margin: 0 auto;
-    text-align: center;
-    border-bottom: 1px solid $color-text-grey2;
 
 }

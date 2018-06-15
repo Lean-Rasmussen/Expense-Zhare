@@ -4,10 +4,13 @@ class Payer extends Component{
 
     render(){
         return(
-            <li className="Payer" id={1}>
-                <p>{this.props.name}</p>
-                <button onClick={()=>this.props.removePayer(this.props.name)} className="btn"
-                > X </button>
+            <li className="addPayer__list__item" id={1}>
+                <p>{this.props.name} 
+                    <a 
+                        onClick={()=>this.props.removePayer(this.props.name)} 
+                        className="btn--remove"
+                > X </a></p>
+                
             </li>
         )
     }

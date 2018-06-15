@@ -20,8 +20,8 @@ class AddPayer extends Component{
     render(){
         return(
             <div className="addPayer">
-                <h3>Add contributor</h3>
-                <p> Name:</p>
+                <h3 className="header__sub">Add contributor</h3>
+                <p className="para-text"> Name:</p>
                 <input type="text" 
                         onChange={(event)=>{this.inputValue(event)}} 
                         className="input addPayer__input" value={this.state.input}
@@ -33,7 +33,7 @@ class AddPayer extends Component{
                     }
                 }
                 > Add </button>
-                <ul>
+                <ul className="addPayer__list" >
                 {this.props.payers.map((payer) =>{
               return(
                     <Payer removePayer={this.props.removePayer} name ={payer.Name} key={payer.id} />

@@ -6,7 +6,7 @@ export default class expenseOverview extends Component{
     render(){
         return(
             <div className="expense-overview">
-                <h3>Last added expenses</h3>
+                <h3 className="header__sub">Last added expenses</h3>
                 {this.props.payments.map((payment) =>{
                                 return(
                                         <Expense 

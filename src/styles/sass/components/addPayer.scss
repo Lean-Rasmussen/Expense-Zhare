@@ -1,3 +1,16 @@
 .addPayer{
-    background-color: orange;
+    background-color: $color-green-blue;
+
+    &__list{
+        list-style: none;
+        text-align: left;
+        
+
+        &__item{
+            margin-bottom: 1rem;
+            display: inline-block;
+            margin-left: 1rem;
+            font-size: 2rem;
+        }
+    }
 }
