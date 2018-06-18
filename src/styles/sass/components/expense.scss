@@ -1,3 +1,37 @@
 .expense{
-    background-color: aquamarine;
+    perspective:  150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    width: 100%;
+    height: 10rem;
+
+    &__side{
+        transition: all 0.5s ease;
+        backface-visibility: hidden;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 5rem;
+        display: inline;
+        & p{
+            display: inline;
+        }
+
+        &--front{
+
+            
+        }
+        &--back{
+            transform: rotateX(180deg);
+            background-color: $color-darner-tail;
+        }
+    }
+
+    &:hover &__side--front{
+        transform: rotateX(-180deg);
+    }
+    &:hover &__side--back{
+        transform: rotateX(0deg);
+    }
 }

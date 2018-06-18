@@ -1,3 +1,10 @@
 .expense-overview{
     background-color: $color-faded-post;
+    &__container{
+        position: relative;
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }
