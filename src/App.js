@@ -42,12 +42,12 @@ class App extends Component {
         payer.Name === name)
     })
     let newPayment ={
-      name: name,
       amount: amount,
       description: description,
       id: name+description,
     }
     payer.payments.push(newPayment)
+    this.setState({})
   }
 
   removePayment=(id)=>{
