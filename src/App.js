@@ -64,7 +64,7 @@ class App extends Component {
       <div className="App">
         <AddPayer payers={this.state.payers} addPayer= {this.addPayer} removePayer={this.removePayer} />
         <AddPayment payers={this.state.payers} addPayment={this.addPayment}/>      
-        <ExpenseOverview payments={this.state.payers} removePayment ={this.removePayment} />
+        <ExpenseOverview payers={this.state.payers} removePayment ={this.removePayment} />
         <TotalSpend payers={this.state.payers} />
       </div>
     );

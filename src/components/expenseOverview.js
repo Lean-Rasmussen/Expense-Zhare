@@ -8,19 +8,27 @@ export default class expenseOverview extends Component{
             <div className="expense-overview">
                 <h3 className="header__sub">Last added expenses</h3>
                 <div className="expense-overview__container">
-                    {this.props.payments.map((payment) =>{
-                                    return(
-                                            <Expense 
-                                            name={payment.name} 
-                                            id={payment.id} 
-                                            key={payment.id}
-                                            description={payment.description}
-                                            amount={payment.amount}
-                                            removePayment ={this.props.removePayment} />
-                                            )}
-                                        )}
+                    {this.props.payers.map((payer)=>{
+                        if(payer.payments.length>0){
+                            return(
+                            payer.payments.map((payment)=>{
+                                    <Expense 
+                                        id={payment.id} 
+                                        key={payment.id}
+                                        description={payment.description}
+                                        amount={payment.amount}
+                                        removePayment ={this.props.removePayment} />
+                                })
+                            )
+                            }else {
+                                console.log("not that long")
+                            }       
+                        }
+                    )}
                 </div>
             </div>
         )
     }
 }
+/* 
+ */
