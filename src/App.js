@@ -10,7 +10,7 @@ class App extends Component {
     super()
 
     this.state = {payers:[],
-                  totalExpenses: 0,  
+                  totalExpenses: 0,
     };
   }
 // Adds and removes players from the state
@@ -20,7 +20,6 @@ class App extends Component {
       Name:Name,
       id: Name,
       balance: 0,
-      //()=> this.payments.reduce((a, b)=>{ return a+b},0),
       payments:[],
     }
     payers.push(newPayer);
@@ -42,9 +41,11 @@ class App extends Component {
         payer.Name === name)
     })
     let newPayment ={
+      name : name,
       amount: amount,
       description: description,
       id: name+description,
+      date: new Date(),
     }
     payer.payments.push(newPayment)
     this.setState({})
@@ -59,12 +60,19 @@ class App extends Component {
     this.totalExpenses();
   }
 
+
+
   render() {
     return (
       <div className="App">
         <AddPayer payers={this.state.payers} addPayer= {this.addPayer} removePayer={this.removePayer} />
         <AddPayment payers={this.state.payers} addPayment={this.addPayment}/>      
-        <ExpenseOverview payers={this.state.payers} removePayment ={this.removePayment} />
+        <ExpenseOverview 
+        /* this returns a flat array of all the payments made by all the payers.*/
+          payments={ this.state.payers.map((payer)=>{return payer.payments}).reduce(function(a, b) {
+            return a.concat(b);
+        }, [])}
+          removePayment ={this.removePayment} />
         <TotalSpend payers={this.state.payers} />
       </div>
     );
@@ -72,3 +80,5 @@ class App extends Component {
 }
 
 export default App;
+
+
